@@ -1,0 +1,413 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+:root {
+  --green: #4caf4f;
+  --dark-green: #2f6b31;
+  --black: #263238;
+  --dark-grey: #4d4d4d;
+  --grey-para: #717171;
+  --white: #ffffff;
+  --silver: #f5f7fa;
+}
+.flex {
+  display: flex;
+}
+.jcc {
+  justify-content: center;
+}
+.jcsb {
+  justify-content: space-between;
+}
+.aic {
+  align-items: center;
+}
+.box {
+  max-width: 1440px;
+  padding: 0px 144px;
+  margin: auto;
+}
+/* utility */
+h1 {
+  font-size: 64px;
+  line-height: 1.1;
+  font-weight: bold;
+  color: var(--dark-grey);
+}
+h2 {
+  font-size: 36px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--dark-grey);
+}
+h3 {
+  font-size: 28px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: var(--dark-grey);
+}
+h4 {
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--green);
+}
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--grey-para);
+}
+.bg-silver {
+  background-color: var(--silver);
+}
+/* header */
+header {
+  padding: 22px 0;
+
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #222;
+  color: white;
+  padding: 15px;
+  z-index: 1000; /* Ensures navbar stays above other content */
+}
+
+.nav-links,
+.cta {
+  gap: 10px;
+}
+.nav-link,
+.cta-link,
+.meet h4,
+.marketing-card h4 a {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--dark-grey);
+  transition: box-shadow 0.3s ease-in-out;
+}
+.nav-link::after,
+.cta-link::after,
+.meet h4::after,
+.marketing-card h4 a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: var(--green);
+  transition: width 0.3s ease-in-out;
+}
+.nav-link:hover::after,
+.meet h4:hover::after,
+.marketing-card h4 a:hover::after {
+  width: 100%;
+}
+
+.signup {
+  background-color: var(--green);
+  color: var(--white);
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+}
+.signup:hover {
+  background-color: var(--dark-green);
+}
+
+section {
+  margin-bottom: 48px;
+}
+/* menu  */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--dark-grey);
+}
+.logo {
+  display: none;
+}
+.menu {
+  width: 100%;
+}
+/* hero */
+.hero {
+  padding: 96px 0;
+  gap: 20px;
+}
+.hero-text {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 60%;
+}
+.btn {
+  padding: 14px 32px;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+  background-color: var(--green);
+  color: var(--white);
+  border-radius: 4px;
+  border: 0;
+  transition: all 0.2s ease-in-out;
+}
+.btn:hover {
+  background-color: var(--dark-green);
+}
+.hero-text p {
+  margin: 16px 0 32px 0;
+}
+.hero-text h1 span {
+  color: var(--green);
+}
+.hero-img {
+  width: 40%;
+}
+.hero-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* clients */
+.clients {
+  flex-direction: column;
+}
+.clients p {
+  margin: 8px 0 16px 0;
+}
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+.logo-wrapper {
+  gap: 140px;
+  animation: marquee 20s linear infinite;
+  width: max-content;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* community */
+.community {
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+}
+.community h2 {
+  text-align: center;
+}
+.community p {
+  margin: 8px 0 16px 0;
+  text-align: center;
+}
+.community-wrapper {
+  padding: 16px 0;
+}
+/* cards */
+.card {
+  flex-direction: column;
+  width: 28%;
+  padding: 24px;
+  background-color: var(--silver);
+  border-radius: 8px;
+}
+.card p {
+  text-align: center;
+}
+.card h3 {
+  margin: 16px 0 8px 0;
+  text-align: center;
+}
+/* }spendings */
+.spendings-text {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+}
+.spendings-text p {
+  margin: 16px 0 32px 0;
+}
+.spendings-img {
+  margin: 52px 0;
+}
+.spendings-img img {
+  max-width: 100%;
+  height: auto;
+}
+/* local */
+.local {
+  padding: 64px 0;
+}
+.local-data,
+.local-text {
+  width: 40%;
+}
+.local-text h2 {
+  margin-bottom: 8px;
+}
+.local-text span {
+  color: var(--green);
+}
+.data-card {
+  gap: 16px;
+}
+.data-row {
+  gap: 40px;
+  flex-direction: column;
+}
+.local-data {
+  gap: 30px;
+  justify-content: end;
+}
+.data-card img {
+  height: 48px;
+  width: 48px;
+}
+/* customers */
+.customers {
+  padding: 32px 0;
+}
+.customers-text {
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-start;
+  width: 50%;
+}
+.customers-img img {
+  max-width: 100%;
+  height: auto;
+}
+.logos {
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.meet h4 a {
+  color: var(--green);
+}
+.meet h4 {
+  padding-left: 0;
+}
+/* marketing */
+.marketing {
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+}
+.marketing h2 {
+  text-align: center;
+}
+.marketing p {
+  margin: 8px 0 16px 0;
+  text-align: center;
+}
+.marketing-wrapper {
+  padding: 16px 0;
+  margin-top: 30px;
+}
+.marketing-card {
+  flex-direction: column;
+  width: 27%;
+  padding: 16px;
+  background-color: var(--silver);
+  border-radius: 8px;
+  gap: 16px;
+}
+.h4-head {
+  color: var(--grey-para);
+}
+.marketing-card h4 {
+  text-align: center;
+}
+.marketing-card h4 a {
+  color: var(--green);
+}
+/* cta section */
+.cta-sec {
+  flex-direction: column;
+  gap: 32px;
+  padding: 32px 0;
+}
+.cta-sec h2 {
+  font-size: 64px;
+  line-height: 1.2;
+  text-align: center;
+  width: 80%;
+}
+/* footer */
+.foot {
+  padding: 70px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+footer {
+  background-color: var(--black);
+}
+.foot h4 {
+  color: var(--white);
+  margin-bottom: 24px;
+}
+.foot a,
+.foot li,
+.foot p {
+  color: var(--silver);
+  margin-bottom: 12px;
+  font-size: 14px;
+  transition: 0.2s ease-in-out;
+}
+.foot a:hover {
+  color: var(--green);
+}
+.foot-logo {
+  flex-direction: column;
+}
+.foot-email {
+  justify-self: right;
+  flex-direction: column;
+}
+.logo-last {
+  max-width: 100%;
+  height: auto;
+}
+.email {
+  height: 40px;
+  background-color: var(--dark-grey);
+  padding: 12px;
+  border-radius: 8px;
+}
+input {
+  height: 100%;
+  background-color: transparent;
+  border: 0;
+  color: var(--white);
+  font-size: 14px;
+}
+.foot-social {
+  gap: 15px;
+}
